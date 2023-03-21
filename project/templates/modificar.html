@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-6" style="text-align: start;">
+    <a href="anime" class="btn btn-outline-info">Regresar</a>
+</div>
+<br>
+<div class="p-5 mb-4 bg-light shadow-lg" style="border-radius: 1rem;">
+  <div class="container-fluid ">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="fw-bold display-5 text-center text-dark"><b>Modificar producto</b></h1><br>
+          </div>
+      </div>
+      <form method="POST" action="/modificar">
+      <div class="row">
+        <div hidden>
+            {{form.id(class="input is-link")}}
+        </div>
+        
+        <div class="col-6">
+            <label class="text-black"><b>Nombre:</b></label>
+            {{form.nombre(class="input is-link")}}
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Año:</b></label>
+            {{form.anio(class="input is-link")}}
+        </div>
+        <div class="col-12">
+            <label class="text-black"><b>Control:</b></label>
+            {{form.autor(class="input is-link")}}
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Precio:</b></label>
+            {{form.precio(class="input is-link")}}
+        </div>
+        <div class="col-12">
+            <label class="text-black"><b>URL de la foto:</b></label>
+            {{form.imagen(class="input is-link")}}<br><br>
+        </div>
+        <div class="col-12" style="text-align: center;">
+            <button class="btn btn-outline-info">Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block content %}
+<div class="columns">
+  <div class="column is-narrow">
+    <div class="box" style="width: 400px; background: linear-gradient(#eea8a8, #b2b7ec);">
+      <p class="title is-5">Datos contacto</p>
+      <div class="form">
+        Nombre(s):
+        <input class="input is-link" type="text" placeholder="Nombre(s)">
+        <br>
+        Apellidos:
+        <input class="input is-link" type="text" placeholder="Apellidos">
+        <br>
+        Correo:
+        <input class="input is-link" type="text" placeholder="usuario@email.com">
+        <br>
+        Mensaje:
+        <textarea class="textarea is-link" placeholder="Deje su pregunta......"></textarea>
+        <br>
+        <button class="button is-dark">Enviar</button>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="box" style="background: linear-gradient(#eea8a8, #b2b7ec);">
+      <p class="title is-5">Nuestra ubicaci&oacute;n</p>
+  <br />
+  <section>
+    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+      <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+      <script>
+        (function () {
+          var setting = {
+            height: 450,
+            width: 700,
+            zoom: 16,
+            queryString:
+              "SPA León, Valle de Oaxaca, Valle del Campestre, León, Gto., México",
+            place_id: "ChIJo5s0No-_K4QR-NfN2PCsZd8",
+            satellite: false,
+            centerCoord: [21.153137806144628, -101.69078429999999],
+            cid: "0xdf65acf0d8cdd7f8",
+            lang: "es",
+            cityUrl: "/mexico/leon-19108",
+            cityAnchorText: "Mapa de León, El Bajío, México",
+            id: "map-9cd199b9cc5410cd3b1ad21cab2e54d3",
+            embed_id: "543477",
+          };
+          var d = document;
+          var s = d.createElement("script");
+          s.src = "https://1map.com/js/script-for-user.js?embed_id=543477";
+          s.async = true;
+          s.onload = function (e) {
+            window.OneMap.initMap(setting);
+          };
+          var to = d.getElementsByTagName("script")[0];
+          to.parentNode.insertBefore(s, to);
+        })();
+      </script>
+      <a href="https://1map.com/es/map-embed">1 Map</a>
+    </div>
+  </section>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

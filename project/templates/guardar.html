@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-6" style="text-align: start;">
+    <a href="anime" class="btn btn-outline-info">Regresar</a>
+</div>
+<br>
+<div class="p-5 mb-4 bg-light shadow-lg" style="border-radius: 1rem;">
+  <div class="container-fluid ">
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="fw-bold display-5 text-center text-dark"><b>Agregar nuevo producto</b></h1><br>
+          </div>
+      </div>
+      <form method="POST" action="/guardar">
+      <div class="row">
+        <div class="col-12">
+            <label class="text-black"><b>URL de la imagen:</b></label>
+            <input class="input is-link" type="text" name="imagen" placeholder="Ingresa la URL de la imagen">
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Nombre:</b></label>
+            <input class="input is-link" type="text" name="nombre" placeholder="Ingresa el nombre">
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Año:</b></label>
+            <input class="input is-link" type="text" name="anio" placeholder="Ingresa el año">
+        </div>
+        <div class="col-12">
+            <label class="text-black"><b>Autor o Marca:</b></label>
+            <input class="input is-link" type="text" name="autor" placeholder="Ingresa la marco o a el autor">
+        </div>
+        <div class="col-6">
+            <label class="text-black"><b>Precio:</b></label>
+            <input class="input is-link" type="text" name="precio" placeholder="Ingresa el precio">
+        </div>
+        <br>
+        <div class="col-12" style="text-align: center;">
+            <button class="button is-dark">Guardar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
